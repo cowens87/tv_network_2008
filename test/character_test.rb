@@ -1,0 +1,17 @@
+require "minitest/autorun"
+require "minitest/pride"
+require "./lib/character"
+require "pry";
+
+class CharacterTest < Minitest::Test
+  #iteration 1
+  def test_it_exists
+    kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
+
+    assert_instance_of Character, kitt
+  end
+
+  # kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
+
+
+end
