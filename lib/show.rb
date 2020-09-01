@@ -14,14 +14,17 @@ class Show
     end
   end
 
-  def highest_paid_actor
-    @characters.max_by do |character|
-      character.salary
+  # def highest_paid_actor
+  #   highest = []
+  #   character.salary.max_by do |salary|
+  #      salary == salary.count
+  #   end
+  # end
+
+  def actor
+    actors = []
+    @characters.find_all do |actor|
+      actors << @character.actor
     end
-  end
-
-
-  def actors
-    @self.character.actor
   end
 end
